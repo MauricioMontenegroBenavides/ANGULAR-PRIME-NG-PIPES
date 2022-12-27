@@ -1,0 +1,68 @@
+<div class="text-layout">
+
+  <h1>Pipes Básicos</h1>
+
+  <p>Pipes incluidos en el Angular usualmente incluidos en Commun Module</p>
+
+
+</div>
+
+<div class="grid ">
+      <div class="  md-4 col" >
+         <p-card header="uppercase" [subheader]="nombreLower">
+            {{nombreLower|uppercase}}
+          </p-card>
+      </div>
+
+      <div class="   md-4 col">
+        <p-card header="lowercase" [subheader]=" nombreUpper">
+           {{nombreLower|lowercase}}
+         </p-card>
+     </div>
+
+     <div class="  md-4 col">
+      <p-card header="titlecase" [subheader]="nombreCompleto">
+         {{nombreCompleto|titlecase}}
+       </p-card>
+   </div>
+</div>
+
+
+
+
+<div class="text-layout">
+
+  <h1>Date</h1>
+  <p>Pipes para manejar fechas</p>
+
+</div>
+
+<div class="grid ">
+
+
+  <div class="col-6">
+     <p-card >
+
+      <ul>
+        <li>FECHA</li>
+        <li>FECHA | date</li>
+        <li>FECHA | date:'short'</li>
+        <li>FECHA | date:'MMMM dd, yyyy'</li>
+
+      </ul>
+
+      </p-card>
+  </div>
+
+  <div class="col-6">
+    <p-card >
+      <ul>
+        <li>{{fecha}}</li>
+        <li>{{fecha|date}}</li>
+        <li>{{fecha|date:'short'}}</li>
+        <li>{{fecha|date:'MMMM dd, yyyy'}}</li>
+      </ul>
+     </p-card>
+ </div>
+
+</div>

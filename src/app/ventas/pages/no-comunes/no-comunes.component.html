@@ -1,0 +1,69 @@
+<div class="text-layout">
+  <h1>Pipes no tan comunes</h1>
+  <p>Pipes incluidos en el Angular usualmente incluidos en Commun Module</p>
+</div>
+
+<div class="grid">
+  <div class="col md-6">
+    <p-fieldset legend="I18nSelctPipe"[toggleable]="true">
+           Lorem ipsum dolor sit {{nombre}} {{genero|i18nSelect:invitacion}}
+    </p-fieldset>
+</div>
+
+<div class="col md-6">
+    <p-fieldset legend="I18nPluralPipe"[toggleable]="true">
+           iure ratione nisi ipsam {{clientes.length|i18nPlural:opciones}}
+           <form (ngSubmit)="borrar()">
+            <input type="text" name="nombre" [(ngModel)]="nombre">
+            <button type="submit">Agregar</button>
+          </form>
+    </p-fieldset>
+</div>
+
+</div>
+
+<div class="grid">
+  <div class="col-6">
+    <p-fieldset legend="slice Pipe"[toggleable]="true">
+      <b>Original</b>
+      <pre *ngFor="let elemento of clientes">{{elemento}}</pre>
+
+      <b>ORIGINALES</b>
+      <pre>{{clientes}}</pre>
+
+      <b>ORIGINALES</b>
+      <pre>{{clientes|slice:0:2}}</pre><!-- CORTA EL ARREGLO DEPENDIENDO DE L APOSICION QUE SE DIGA -->
+    </p-fieldset>
+  </div>
+
+
+  <div class="col-6">
+    <p-fieldset legend="KeyValue Pipe"[toggleable]="true">
+
+      <ul>
+        <li *ngFor="let item of persona | keyvalue"> <strong>{{item.key|titlecase }}</strong> <b>{{item.value}}</b></li>
+      </ul>
+
+    </p-fieldset>
+  </div>
+
+
+  <div class="col-6">
+    <p-fieldset legend="JSON PIPE"[toggleable]="true">
+      {{persona|json}}
+    </p-fieldset>
+  </div>
+
+
+  <div class="col-6">
+    <p-fieldset legend="ASYNC PIPE"[toggleable]="true">
+        <!--  {{obs|async}} -->
+        <pre *ngIf="!(datos|async)"> Esta resolviendo la promesa</pre>
+        <pre>{{datos|async}}</pre>
+    </p-fieldset>
+  </div>
+
+
+
+</div>
+

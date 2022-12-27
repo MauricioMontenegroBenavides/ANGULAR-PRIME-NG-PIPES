@@ -1,0 +1,41 @@
+<div class="text-layout">
+
+  <h1>Decimal Pipes y Porcentage</h1>
+
+  <p>Pipes incluidos en el Angular usualmente incluidos en Commun Module</p>
+
+
+</div>
+
+<div class="grid">
+
+  <div class="col-4">
+    <p-card header="Ventas Netas">
+
+      <i class="pi pi-dollar"></i>
+      {{ventasNetas |number:'1.2-2'}}<!--Aqui nos dice q ponga toda la parte entera q es poner 1 y dos decimales 2-4 que va haber de dos a 4 decimales-->
+
+    </p-card>
+  </div>
+
+
+  <div class="col-4">
+    <p-card header="Ventas Netas">
+
+
+      {{ventasNetas |currency:'Usd':'symbol-narrow':'1.0-4'}}<!--Aqui nos dice q ponga toda la parte entera q es poner 1 y dos decimales 2-4 que va haber de dos a 4 decimales-->
+
+    </p-card>
+  </div>
+
+
+  <div class="col-4">
+    <p-card header="Porcentual">
+
+
+      {{porcentage|percent:'2.2-2'}}<!--Aqui nos dice q ponga toda la parte entera q es poner 1 y dos decimales 2-4 que va haber de dos a 4 decimales-->
+
+    </p-card>
+  </div>
+
+</div>
